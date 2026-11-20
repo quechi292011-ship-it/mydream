@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><title>MY DREAM ♡</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFAFC;--card:#FFFFFF;--tx:#5D5862;--pk:#F7C6D9;--pks:#FCE4ED;--rose:#D98EAF;--bb:#B9DDF8;--sky:#DCEEFF;--sb:#79A9D2;--gray:#F4F5F8;--btx:#34495e;--ln:#f0e1e8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#1d1b22;--card:#27242e;--tx:#ebe5ec;--pks:#3b2b35;--sky:#23323f;--gray:#2d2a35;--ln:#3a3542}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#1d1b22;--card:#27242e;--tx:#ebe5ec;--pks:#3b2b35;--sky:#23323f;--gray:#2d2a35;--ln:#3a3542}
+*{box-sizing:border-box}html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Nunito,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;min-height:100%}
+h1,h2,h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;color:var(--rose);margin:.2em 0}
+.hw{font-family:Caveat,'Segoe Script','Bradley Hand',Georgia,serif;font-size:1.5em}
+#app{display:flex;min-height:100vh}
+aside{width:250px;background:var(--card);border-right:1px solid var(--ln);padding:16px 12px;position:sticky;top:0;height:100vh;overflow-y:auto;flex:none;transition:.2s}
+aside.c{width:0;padding:0;overflow:hidden;border:0}
+.logo{font:700 1.5rem 'Playfair Display',Georgia,serif;color:var(--rose);padding:4px 8px}.logo small{display:block;font:500 1rem Caveat,Georgia,serif;color:var(--sb)}
+.g{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sb);margin:14px 8px 4px}
+aside a{display:block;padding:8px 12px;border-radius:12px;color:var(--tx);text-decoration:none;font-size:.95rem}
+aside a.on{background:var(--pks);color:var(--rose);font-weight:700}aside a:hover{background:var(--sky)}
+main{flex:1;min-width:0;padding:20px clamp(14px,3vw,36px) 90px;max-width:1100px}
+.top{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--card);border:1.5px solid var(--ln);border-radius:12px;padding:9px 12px;width:100%;min-height:42px}
+input[type=checkbox]{width:20px;min-height:20px}input[type=range]{padding:0}
+.top input{flex:1;min-width:140px}.top select{width:auto}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:9px 18px;min-height:42px;background:var(--bb);color:var(--btx);font-weight:700}
+button.p{background:var(--pk);color:#6b3a52}button.g2{background:var(--gray);color:var(--tx)}button.x{background:none;color:var(--rose);padding:4px 10px;min-height:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--card);border:1.5px solid var(--ln);border-radius:18px;overflow:hidden;position:relative}
+.card.t{transform:rotate(-.6deg)}.card.t:nth-child(even){transform:rotate(.7deg)}
+.card .b{padding:12px 14px}.card .im{width:100%;height:150px;object-fit:cover;display:block}
+.ph{height:90px;background:repeating-linear-gradient(45deg,var(--pks),var(--pks) 10px,var(--sky) 10px,var(--sky) 20px);display:grid;place-items:center;font-size:.8rem;color:var(--sb)}
+.tag{display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:99px;background:var(--sky);color:var(--btx);margin:2px 3px 0 0}.tag.pk{background:var(--pks);color:var(--rose)}
+.bar{height:8px;border-radius:9px;background:var(--gray);overflow:hidden}.bar i{display:block;height:100%;background:var(--sb)}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:14px 0}
+.stat{padding:14px;border-radius:18px;background:var(--pks)}.stat:nth-child(even){background:var(--sky)}.stat b{font:700 2rem 'Playfair Display',Georgia,serif;display:block;color:var(--rose)}
+.hero{border-radius:24px;padding:22px;background:linear-gradient(135deg,var(--pks),var(--sky));border:1.5px dashed var(--pk)}
+.empty{text-align:center;padding:40px 16px;border:2px dashed var(--pk);border-radius:20px;background:var(--card)}.empty .hw{color:var(--rose)}
+.chips{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px}.chips button{flex:none;min-height:34px;padding:5px 14px;background:var(--gray);color:var(--tx)}.chips button.on{background:var(--pk);color:#6b3a52}
+.modal{position:fixed;inset:0;background:#0006;display:none;align-items:flex-end;justify-content:center;z-index:50}.modal.on{display:flex}
+.sheet{background:var(--bg);width:100%;max-width:560px;max-height:92vh;overflow-y:auto;border-radius:24px 24px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px))}
+@media(min-width:700px){.modal{align-items:center}.sheet{border-radius:24px}}
+label{display:block;font-size:.82rem;font-weight:700;margin:10px 0 3px}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1;min-width:130px}
+.ck{display:flex;gap:8px;align-items:center;padding:3px 0}.ck input[type=text]{flex:1}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cal div{min-height:62px;background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:3px;font-size:.72rem;overflow:hidden;cursor:pointer}
+.cal .h{min-height:0;border:0;background:none;text-align:center;font-weight:700;cursor:default}.cal .td{border-color:var(--rose)}.cal em{display:block;background:var(--bb);color:var(--btx);border-radius:5px;padding:0 3px;margin-top:2px;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl{border-left:3px solid var(--pk);margin-left:10px;padding-left:18px}.tl .it{position:relative;margin-bottom:14px}.tl .it:before{content:"♡";position:absolute;left:-30px;top:0;color:var(--rose);background:var(--bg)}
+.masonry{columns:220px;gap:14px}.masonry .card{break-inside:avoid;margin-bottom:14px}
+.fav{position:absolute;right:8px;top:8px;background:#fffc;color:var(--rose);padding:2px 9px;min-height:30px}
+.mnav{display:none}
+@media(max-width:800px){aside{position:fixed;z-index:40;left:0;top:0;transform:translateX(-100%);width:270px}aside.o{transform:none}
+.mnav{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--ln);justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:30}
+.mnav button{background:none;color:var(--tx);padding:6px 10px;font-size:.78rem}.mnav .pl{background:var(--pk);color:#6b3a52;font-size:1.3rem;min-width:52px}}
+</style></head><body>
+<div id="app"><aside id="sb"></aside><main id="main"></main></div>
+<nav class="mnav"><button onclick="go('home')">Home</button><button onclick="go('goals')">Goals</button><button class="pl" onclick="addMenu()">+</button><button onclick="go('vision')">Board</button><button onclick="menu()">Menu</button></nav>
+<div class="modal" id="md" onclick="if(event.target===this)closeM()"><div class="sheet" id="sh"></div></div>
+<script>
+const ST=['Not Started','In Progress','Completed','On Hold','Someday'],PR=['Low','Medium','High'];const SV={'Not Started':'Chưa bắt đầu','In Progress':'Đang làm','Completed':'Hoàn thành','On Hold':'Tạm dừng','Someday':'Một ngày nào đó',Low:'Thấp',Medium:'Trung bình',High:'Cao'},GV={Plan:'Kế hoạch',Dream:'Ước mơ',Learn:'Học hỏi',Make:'Sáng tạo',Write:'Viết'};
+const FL={title:['Tên','text'],cat:['Danh mục','cat'],desc:['Mô tả','area'],why:['Lý do','area'],date:['Ngày','date'],end:['Ngày dự kiến hoàn thành','date'],stage:['Giai đoạn / độ tuổi','text'],budget:['Ngân sách','num'],target:['Số tiền mong muốn','num'],saved:['Số tiền đã tiết kiệm','num'],status:['Trạng thái','st'],priority:['Ưu tiên','pr'],place:['Địa điểm','text'],link:['Link tham khảo','text'],tags:['Tag (cách nhau bằng dấu phẩy)','text'],img:['Ảnh','img'],notes:['Ghi chú','area'],prog:['Tiến độ','range'],level:['Trình độ hiện tại → mong muốn','text'],res:['Tài liệu / sách / khóa học','area'],feel:['Cảm nhận / kết quả','area'],board:['Tên bảng','text'],quote:['Quote','text']};
+const G=['title','cat','desc','why','date','end','budget','status','priority','img','tags','notes','prog'];
+const SC={
+home:['Trang chủ — Thế giới ước mơ','',[]],
+goals:['Mục tiêu','Plan',['Bây giờ','Ngắn hạn (3–6 tháng)','Trung hạn (1–2 năm)','Dài hạn (3–5 năm)','Tương lai (5–10 năm+)','Một ngày nào đó'],G],
+timeline:['Dòng thời gian cuộc đời','Plan',[],['title','stage','date','desc','status','img']],
+calendar:['Lịch','Plan',[]],
+vision:['Bảng tầm nhìn','Plan',['My Dream Life','Dream Career','Dream Travel','Dream Home','Things I Want to Learn','My Future Self','My Ideal Lifestyle'],['title','board','quote','desc','img','link']],
+bucket:['Điều muốn làm trong đời','Dream',['Nơi muốn đến','Điều muốn thử','Kỹ năng muốn học','Trải nghiệm muốn có','Thứ muốn sở hữu','Người muốn gặp','Sự kiện muốn tham dự','Thử thách muốn hoàn thành','Ước mơ chưa lên kế hoạch'],['title','cat','desc','why','date','budget','place','status','img','tags','feel']],
+travel:['Du lịch & Khám phá','Dream',['Nơi muốn đến','Kế hoạch chuyến đi','Kỷ niệm chuyến đi'],['title','cat','place','date','end','budget','desc','notes','img','tags','status']],
+exp:['Trải nghiệm','Dream',['Things to Experience','Places to Explore','Events to Attend','Things to Try','New Challenges','Creative Experiences','Learning Experiences','Personal Milestones'],['title','cat','desc','date','place','budget','status','img']],
+someday:['Có thể một ngày nào đó','Dream',['Một ngày nào đó','Có thể','Ước mơ tương lai','Ý tưởng cần khám phá','Chưa lên kế hoạch'],['title','cat','desc','img','tags','notes']],
+done:['Ước mơ đã hoàn thành','Dream',[]],
+edu:['Học tập','Learn',['Mathematics','Literature','Physics','Chemistry','Biology','History','Geography','Politics','Economics','Law','Psychology','Programming','Electronics','Critical Thinking','Science','Technology','Other'],['title','cat','desc','res','date','status','prog','notes','img']],
+lang:['Ngoại ngữ','Learn',['Tiếng Anh','Tiếng Hàn','Tiếng Trung','Ngôn ngữ khác'],['title','cat','level','res','status','prog','notes']],
+career:['Nghề nghiệp & Tương lai','Learn',['Nghề muốn tìm hiểu','Ngành học','Chứng chỉ','Kinh nghiệm muốn có','Dự án nghề nghiệp','Mục tiêu dài hạn'],['title','cat','desc','why','res','status','notes','img']],
+tech:['Công nghệ & Kỹ thuật','Learn',['Programming & CS','Electronics','Robotics','Drone & Aviation','Other Engineering'],['title','cat','desc','res','budget','status','prog','notes','img']],
+skills:['Kỹ năng muốn học','Learn',['Technical','Creative','Communication','Life','Academic','Practical','Digital','Language'],['title','cat','desc','why','level','res','date','status','prog']],
+dev:['Phát triển bản thân','Learn',['Critical Thinking','Emotional Intelligence','Psychology','Communication','Self-awareness','Time Management','Problem Solving','Decision Making','Confidence','Habits'],['title','cat','desc','notes','status','prog']],
+hobby:['Sở thích & Sưu tầm','Make',['Cầu lông','Bóng đá','Cờ & trò chơi trí tuệ','Mỹ thuật & Sáng tạo','Rubik & Puzzle','Tinh thể & Khoáng vật','Mô hình & Đồ sưu tầm','Sách & Kiến thức','Ăn uống','Danh sách muốn mua'],['title','cat','desc','budget','priority','link','status','img','tags','notes']],
+projects:['Dự án cá nhân','Make',[],['title','desc','why','date','end','budget','status','prog','notes','img']],
+money:['Kế hoạch tài chính','Make',['Mục tiêu tiết kiệm','Ngân sách mua sắm','Quỹ du lịch','Ngân sách sở thích','Ngân sách học tập','Tiết kiệm dài hạn','Danh sách muốn mua'],['title','cat','target','saved','end','notes']],
+notes:['Ghi chú & Ý tưởng','Write',[],['title','cat','desc','tags','img']],
+journal:['Nhật ký kỷ niệm','Write',[],['title','date','desc','place','tags','img']],
+settings:['Cài đặt','','']};
+const TYPES=[['Mục tiêu','goals'],['Điều muốn làm','bucket'],['Cột mốc','timeline'],['Kế hoạch du lịch','travel'],['Môn học','edu'],['Ngoại ngữ','lang'],['Kỹ năng','skills'],['Sở thích / Đồ sưu tầm','hobby'],['Dự án','projects'],['Mục tiêu tài chính','money'],['Trải nghiệm','exp'],['Ghi chú','notes'],['Kỷ niệm','journal'],['Mục bảng tầm nhìn','vision'],['Ý tưởng một ngày nào đó','someday']];
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let DB={items:[],set:{name:'',greet:'',quote:'',daily:'',thought:'',remind:'',fmt:'vi',theme:''}},cur=null,flt={q:'',st:'',cat:'',fav:0,sort:'new'},calM=new Date(),saveErr='';
+try{const r=localStorage.getItem('mydream_v1');if(r){const d=JSON.parse(r);if(d&&Array.isArray(d.items))DB={items:d.items,set:{...DB.set,...d.set}}}}catch(e){saveErr='Không đọc được dữ liệu đã lưu.'}
+function save(){try{localStorage.setItem('mydream_v1',JSON.stringify(DB));saveErr=''}catch(e){saveErr='Không lưu được (bộ nhớ đầy hoặc bị chặn). Hãy Export JSON để giữ dữ liệu.';alert(saveErr)}}
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const fd=d=>{if(!d)return'';const[a,b,c]=d.split('-');return DB.set.fmt==='iso'?d:`${c}/${b}/${a}`};
+const pct=i=>i.status==='Completed'?100:(i.ck&&i.ck.length?Math.round(i.ck.filter(x=>x.d).length/i.ck.length*100):+i.prog||0);
+const hash=()=>location.hash.slice(1)||'home';
+function go(s){location.hash=s;$('#sb').classList.remove('o')}
+function menu(){$('#sb').classList.toggle('o')}
+function nav(){const h=hash();let o='<div class="logo">MY DREAM ♡<small>A little space for all my big dreams.</small></div>',g='';
+for(const k in SC){const[n,gr]=SC[k];if(gr!==g&&gr){o+=`<div class="g">${GV[gr]||gr}</div>`;g=gr}o+=`<a href="#${k}" class="${h===k?'on':''}" onclick="$('#sb').classList.remove('o')">${n}</a>`}
+$('#sb').innerHTML=o}
+function items(sec){return DB.items.filter(i=>sec==='done'?i.status==='Completed':sec==='someday'?(i.sec==='someday'||i.status==='Someday'):i.sec===sec)}
+function card(i,t){const im=i.img?`<img class="im" src="${esc(i.img)}" loading="lazy" onerror="this.outerHTML='<div class=ph>ảnh không tải được ♡</div>'">`:'';const p=pct(i);
+return`<div class="card ${t?'t':''}" onclick="openForm('${i.id}')">${im}<button class="fav" onclick="event.stopPropagation();tog('${i.id}')">${i.fav?'♥':'♡'}</button><div class="b"><b>${esc(i.title)}</b>
+${i.quote?`<div class="hw">“${esc(i.quote)}”</div>`:''}<div>${i.cat?`<span class="tag pk">${esc(i.cat)}</span>`:''}${i.status?`<span class="tag">${SV[i.status]||i.status}</span>`:''}${i.date?`<span class="tag">${fd(i.date)}</span>`:''}${(i.tags||'').split(',').filter(x=>x.trim()).map(x=>`<span class="tag">#${esc(x.trim())}</span>`).join('')}</div>
+${i.desc?`<p style="margin:6px 0;font-size:.88rem">${esc(i.desc).slice(0,110)}</p>`:''}${i.target?`<div style="font-size:.82rem">${(+i.saved||0).toLocaleString()} / ${(+i.target).toLocaleString()} · còn thiếu ${Math.max(0,i.target-(i.saved||0)).toLocaleString()}</div>`:''}
+${(SC[i.sec][3]||[]).includes('prog')||i.target||i.ck?.length?`<div class="bar"><i style="width:${i.target?Math.min(100,Math.round((i.saved||0)/i.target*100)):p}%"></i></div>`:''}</div></div>`}
+function empty(msg){return`<div class="empty"><div class="hw">Chưa có gì ở đây ♡</div><p>${msg||'Câu chuyện nhỏ của bạn bắt đầu từ đây.'}</p><button class="p" onclick="openForm(null,hash())">Thêm mục đầu tiên</button></div>`}
+function tog(id){const i=DB.items.find(x=>x.id===id);i.fav=!i.fav;save();render()}
+function render(){nav();const h=hash(),m=$('#main');if(!SC[h]){go('home');return}
+const bar=`<div class="top"><button class="g2" onclick="$('#sb').classList.toggle('c')">☰</button><input id="gs" placeholder="Tìm trong toàn bộ website…" value="${h==='search'?esc(flt.q):''}" oninput="flt.q=this.value;if(hash()!=='search')location.hash='search';else view()"><button class="p" onclick="addMenu()">+ Thêm mới</button></div>`;
+m.innerHTML=bar+'<div id="v"></div>';view();if(h==='search')$('#gs').focus()}
+function view(){const h=hash(),v=$('#v');if(!v)return;
+if(h==='search'){const q=flt.q.toLowerCase(),r=DB.items.filter(i=>JSON.stringify(i).toLowerCase().includes(q)&&q);v.innerHTML=`<h2>Tìm kiếm</h2>`+(r.length?`<div class="grid">${r.map(i=>card(i)).join('')}</div>`:'<div class="empty">Không tìm thấy gì ♡</div>');return}
+if(h==='home')return home(v);if(h==='calendar')return cal(v);if(h==='settings')return settings(v);
+const[n,,cats]=SC[h];let L=items(h);const all=L.length;
+if(flt.q&&h!=='search')L=L.filter(i=>JSON.stringify(i).toLowerCase().includes(flt.q.toLowerCase()));
+if(flt.cat)L=L.filter(i=>i.cat===flt.cat);if(flt.st)L=L.filter(i=>i.status===flt.st);if(flt.fav)L=L.filter(i=>i.fav);
+L.sort((a,b)=>flt.sort==='date'?(a.date||'9').localeCompare(b.date||'9'):flt.sort==='prio'?PR.indexOf(b.priority)-PR.indexOf(a.priority):flt.sort==='az'?a.title.localeCompare(b.title):b.created-a.created);
+let o=`<h1>${n}</h1>`;
+if(cats.length&&h!=='vision')o+=`<div class="chips"><button class="${!flt.cat?'on':''}" onclick="flt.cat='';view()">All</button>${cats.map(c=>`<button class="${flt.cat===c?'on':''}" onclick="flt.cat='${c.replace(/'/g,"\\'")}';view()">${c}</button>`).join('')}</div>`;
+o+=`<div class="top"><select onchange="flt.st=this.value;view()"><option value="">Mọi trạng thái</option>${ST.map(s=>`<option value="${s}" ${flt.st===s?'selected':''}>${SV[s]}</option>`).join('')}</select><select onchange="flt.sort=this.value;view()"><option value="new">Mới nhất</option><option value="date">Theo ngày</option><option value="prio">Ưu tiên</option><option value="az">A–Z</option></select><button class="g2" onclick="flt.fav=!flt.fav;view()">${flt.fav?'♥ Yêu thích':'♡ Yêu thích'}</button></div>`;
+if(!L.length)o+=all?'<div class="empty">Không có mục nào khớp bộ lọc.</div>':empty(h==='done'?'Hoàn thành một mục tiêu và nó sẽ xuất hiện ở đây.':'');
+else if(h==='timeline'){const gp={};L.sort((a,b)=>(a.date||'9').localeCompare(b.date||'9')).forEach(i=>{(gp[i.stage||(i.date?i.date.slice(0,4):'Chưa xác định thời gian')]=gp[i.stage||(i.date?i.date.slice(0,4):'Chưa xác định thời gian')]||[]).push(i)});
+o+=Object.keys(gp).map(k=>`<h3>${esc(k)}</h3><div class="tl">${gp[k].map(i=>`<div class="it" onclick="openForm('${i.id}')"><b>${esc(i.title)}</b> <span class="tag">${fd(i.date)||'—'}</span><div style="font-size:.88rem">${esc(i.desc)}</div></div>`).join('')}</div>`).join('')}
+else if(h==='vision'){const bd={};L.forEach(i=>(bd[i.board||'Untitled board']=bd[i.board||'Untitled board']||[]).push(i));o+=Object.keys(bd).map(k=>`<h2 class="hw">${esc(k)}</h2><div class="masonry">${bd[k].map(i=>card(i,1)).join('')}</div>`).join('')}
+else if(h==='money'){const T=L.reduce((s,i)=>s+(+i.target||0),0),S=L.reduce((s,i)=>s+(+i.saved||0),0);o+=`<div class="stats"><div class="stat"><b>${S.toLocaleString()}</b>Đã tiết kiệm</div><div class="stat"><b>${T.toLocaleString()}</b>Mục tiêu</div><div class="stat"><b>${Math.max(0,T-S).toLocaleString()}</b>Còn thiếu</div></div><div class="grid">${L.map(i=>card(i)).join('')}</div>`}
+else o+=`<div class="grid">${L.map((i,k)=>card(i,k%3==1)).join('')}</div>`;
+v.innerHTML=o}
+function home(v){const t=new Date().toISOString().slice(0,10),I=DB.items.filter(i=>!['notes','journal'].includes(i.sec)),s=DB.set;
+const ed=(k,ph)=>`<input value="${esc(s[k])}" placeholder="${ph}" onchange="DB.set.${k}=this.value;save()" style="background:#fff8;margin-top:6px">`;
+const up=I.filter(i=>i.date>=t&&i.status!=='Completed').sort((a,b)=>a.date.localeCompare(b.date)).slice(0,5),fv=DB.items.filter(i=>i.fav).slice(0,6),done=I.filter(i=>i.status==='Completed').length;
+const secs=Object.keys(SC).filter(k=>SC[k][3]&&k!=='done'&&I.some(i=>i.sec===k));
+v.innerHTML=`<div class="hero"><div class="hw" style="color:var(--sb)">Chào mừng đến vũ trụ nhỏ của mình.</div><h1 style="font-size:2.2rem">MY DREAM ♡</h1><div>${s.greet?esc(s.greet):'Mơ nó, lên kế hoạch, sống với nó.'}${s.name?' · '+esc(s.name):''}</div><div style="font-size:.85rem">${new Date().toLocaleDateString('vi-VN',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div><div class="hw">“${esc(s.quote||'Từng bước nhỏ, ước mơ lớn.')}”</div></div>
+<div class="stats"><div class="stat"><b>${I.length}</b>Tổng ước mơ</div><div class="stat"><b>${I.filter(i=>i.status==='In Progress').length}</b>Đang thực hiện</div><div class="stat"><b>${done}</b>Đã hoàn thành</div><div class="stat"><b>${up.length}</b>Sắp đến hạn</div><div class="stat"><b>${items('someday').length}</b>Ý tưởng một ngày nào đó</div><div class="stat"><b>${items('projects').length}</b>Dự án</div></div>
+<h2>Tổng quan tiến độ</h2><p>Tỷ lệ hoàn thành: <b>${I.length?Math.round(done/I.length*100):0}%</b></p>${secs.length?secs.map(k=>{const L=I.filter(i=>i.sec===k),d=L.filter(i=>i.status==='Completed').length;return`<div style="margin:6px 0">${SC[k][0]} <small>${d}/${L.length}</small><div class="bar"><i style="width:${d/L.length*100}%"></i></div></div>`}).join(''):'<div class="empty">Chưa có dữ liệu — mọi chỉ số bắt đầu từ 0 ♡</div>'}
+<h2>Thêm nhanh</h2><div class="row">${[['Thêm điều muốn làm','bucket'],['Thêm mục tiêu','goals'],['Thêm kế hoạch du lịch','travel'],['Thêm kỹ năng','skills'],['Thêm dự án','projects'],['Viết ghi chú','notes'],['Thêm trải nghiệm','exp']].map(x=>`<button class="${x[1]==='goals'?'p':''}" style="flex:none" onclick="openForm(null,'${x[1]}')">${x[0]}</button>`).join('')}</div>
+<h2>Kế hoạch sắp tới</h2>${up.length?`<div class="grid">${up.map(i=>card(i)).join('')}</div>`:'<div class="empty">Chưa có kế hoạch sắp tới.</div>'}
+<h2>Ước mơ yêu thích</h2>${fv.length?`<div class="grid">${fv.map(i=>card(i)).join('')}</div>`:'<div class="empty">Bấm ♡ trên một mục để thêm vào đây.</div>'}
+<h2>Cảm hứng mỗi ngày</h2><div class="card b" style="padding:14px">${ed('thought','Suy nghĩ hôm nay')}${ed('daily','Ghi chú trong ngày')}${ed('remind','Lời nhắc nhỏ')}${ed('quote','Câu nói yêu thích (hiện ở phần chào)')}</div>`}
+function cal(v){const y=calM.getFullYear(),m=calM.getMonth(),f=new Date(y,m,1).getDay(),dn=new Date(y,m+1,0).getDate(),td=new Date().toISOString().slice(0,10);
+let o=`<h1>Calendar</h1><div class="top"><button onclick="calM=new Date(${y},${m-1},1);view()">‹</button><b style="flex:1;text-align:center">${m+1}/${y}</b><button onclick="calM=new Date(${y},${m+1},1);view()">›</button></div><div class="cal">${['CN','T2','T3','T4','T5','T6','T7'].map(d=>`<div class="h">${d}</div>`).join('')}`;
+for(let i=0;i<f;i++)o+='<div class="h"></div>';
+for(let d=1;d<=dn;d++){const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;o+=`<div class="${ds===td?'td':''}" onclick="openForm(null,'goals',{date:'${ds}'})">${d}${DB.items.filter(i=>i.date===ds||i.end===ds).map(i=>`<em onclick="event.stopPropagation();openForm('${i.id}')">${esc(i.title)}</em>`).join('')}</div>`}
+v.innerHTML=o+'</div><p style="font-size:.85rem">Mục không có ngày vẫn được lưu bình thường ở các trang khác. Bấm vào một ngày để thêm mục tiêu.</p>'}
+function settings(v){const s=DB.set,f=(k,l)=>`<label>${l}</label><input value="${esc(s[k])}" onchange="DB.set.${k}=this.value;save()">`;
+v.innerHTML=`<h1>Cài đặt</h1>${f('name','Tên hiển thị')}${f('greet','Lời chào')}${f('quote','Quote')}<label>Định dạng ngày</label><select onchange="DB.set.fmt=this.value;save()"><option value="vi">dd/mm/yyyy</option><option value="iso" ${s.fmt==='iso'?'selected':''}>yyyy-mm-dd</option></select>
+
+<h2>Dữ liệu & sao lưu</h2><p>Dữ liệu chỉ lưu trong trình duyệt của thiết bị này (localStorage), <b>không tự đồng bộ</b> giữa các thiết bị. Hãy Export JSON định kỳ để sao lưu.</p>${saveErr?`<p style="color:var(--rose)">${saveErr}</p>`:''}
+<div class="row"><button onclick="exp()">Sao lưu (xuất JSON)</button><button onclick="csv()">Xuất CSV</button><button onclick="$('#imp').click()">Khôi phục (nhập JSON)</button><button class="p" onclick="clr()">Xóa toàn bộ dữ liệu</button></div><input type="file" id="imp" accept=".json" hidden onchange="imp(this.files[0])">
+<p style="font-size:.85rem">Đang lưu ${DB.items.length} mục.</p>`}
+function theme(){document.documentElement.dataset.theme='light'}
+function dl(name,txt,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click()}
+function exp(){dl('my-dream-backup.json',JSON.stringify(DB),'application/json')}
+function csv(){const k=['sec','cat','title','status','priority','date','end','budget','target','saved','place','tags'];dl('my-dream.csv','\ufeff'+k.join(',')+'\n'+DB.items.map(i=>k.map(x=>'"'+String(i[x]??'').replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv')}
+function imp(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d||!Array.isArray(d.items)||d.items.some(i=>!i.id||!i.title||!SC[i.sec]))throw 0;if(confirm(`Khôi phục ${d.items.length} mục? Dữ liệu hiện tại sẽ bị thay thế.`)){DB={items:d.items,set:{...DB.set,...d.set}};save();theme();render()}}catch(e){alert('File JSON không hợp lệ.')}};r.readAsText(f)}
+function clr(){if(!confirm('Xóa toàn bộ dữ liệu?'))return;if(!confirm('Bạn chắc chắn chứ? Hãy Export JSON trước nếu muốn giữ lại.'))return;if(prompt('Gõ XOA để xác nhận')!=='XOA')return;DB.items=[];save();render()}
+function closeM(){$('#md').classList.remove('on');cur=null}
+function addMenu(){$('#sh').innerHTML=`<h2>Thêm mới</h2><div class="grid" style="grid-template-columns:1fr 1fr">${TYPES.map(t=>`<button class="g2" onclick="openForm(null,'${t[1]}')">${t[0]}</button>`).join('')}</div>`;$('#md').classList.add('on')}
+function openForm(id,sec,pre){let it=id?DB.items.find(x=>x.id===id):{id:uid(),sec:['home','calendar','settings','search','done'].includes(sec)?'goals':sec,ck:[],created:Date.now(),status:'Not Started',...pre};cur=JSON.parse(JSON.stringify(it));cur._new=!id;formHtml();$('#md').classList.add('on')}
+function formHtml(){const c=SC[cur.sec],fs=c[3]||G;
+const fld=k=>{const[l,t]=FL[k],v=cur[k]??'';let e;
+if(t==='area')e=`<textarea rows="3" data-k="${k}">${esc(v)}</textarea>`;else if(t==='cat')e=c[2].length?`<select data-k="cat"><option value=""></option>${c[2].map(x=>`<option ${v===x?'selected':''}>${x}</option>`).join('')}</select>`:`<input data-k="cat" value="${esc(v)}">`;
+else if(t==='st')e=`<select data-k="status">${ST.map(x=>`<option value="${x}" ${v===x?'selected':''}>${SV[x]}</option>`).join('')}</select>`;else if(t==='pr')e=`<select data-k="priority"><option value=""></option>${PR.map(x=>`<option value="${x}" ${v===x?'selected':''}>${SV[x]}</option>`).join('')}</select>`;
+else if(t==='range')e=`<input type="range" data-k="prog" min="0" max="100" value="${+v||0}">`;
+else if(t==='img')e=`<input data-k="img" placeholder="Dán URL ảnh" value="${v&&!v.startsWith('data:')?esc(v):''}"><input type="file" accept="image/*" onchange="upl(this.files[0])" style="margin-top:6px">${v?`<img src="${esc(v)}" style="max-height:90px;border-radius:10px;margin-top:6px" onerror="this.replaceWith(document.createTextNode('Ảnh không tải được'))"><button class="x" onclick="cur.img='';formHtml()">Xóa ảnh</button>`:''}`;
+else e=`<input data-k="${k}" type="${t==='num'?'number':t==='date'?'date':'text'}" value="${esc(v)}">`;return`<div><label>${l}</label>${e}</div>`};
+$('#sh').innerHTML=`<h2>${cur._new?'Thêm':'Sửa'} · ${c[0]}</h2><div class="row">${fs.map(fld).join('')}</div><label>Checklist</label>${(cur.ck||[]).map((x,i)=>`<div class="ck"><input type="checkbox" ${x.d?'checked':''} onchange="cur.ck[${i}].d=this.checked"><input type="text" value="${esc(x.t)}" onchange="cur.ck[${i}].t=this.value"><button class="x" onclick="rd();cur.ck.splice(${i},1);formHtml()">✕</button></div>`).join('')}<div class="ck"><input type="text" id="nck" placeholder="Thêm bước…"><button class="g2" onclick="rd();const t=$('#nck').value.trim();if(t){cur.ck.push({t,d:false});formHtml()}">+</button></div>
+<div class="row" style="margin-top:16px"><button class="p" onclick="sv()">Lưu</button>${cur._new?'':`<button class="g2" onclick="dup()">Nhân bản</button><button class="g2" onclick="del()">Xóa</button>`}<button class="g2" onclick="closeM()">Đóng</button></div>`}
+function rd(){document.querySelectorAll('#sh [data-k]').forEach(e=>{if(e.dataset.k==='img'&&!e.value&&cur.img?.startsWith('data:'))return;cur[e.dataset.k]=e.value})}
+function upl(f){if(!f)return;rd();const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const s=Math.min(1,800/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);cur.img=c.toDataURL('image/jpeg',.7);formHtml()};im.onerror=()=>alert('Không đọc được ảnh.');im.src=r.result};r.readAsDataURL(f)}
+function sv(){rd();if(!(cur.title||'').trim()){alert('Hãy nhập tên cho mục này.');return}if(cur.ck?.length&&cur.status!=='Completed')cur.prog=pct(cur);const n=cur._new;delete cur._new;if(n)DB.items.push(cur);else DB.items[DB.items.findIndex(x=>x.id===cur.id)]=cur;save();closeM();render()}
+function dup(){rd();const c={...cur,id:uid(),title:cur.title+' (copy)',created:Date.now()};delete c._new;DB.items.push(c);save();closeM();render()}
+function del(){if(confirm('Xóa mục này?')){DB.items=DB.items.filter(x=>x.id!==cur.id);save();closeM();render()}}
+addEventListener('hashchange',()=>{flt={q:flt.q,st:'',cat:'',fav:0,sort:'new'};if(hash()!=='search')flt.q='';render()});window.onerror=()=>{const m=$('#main');if(m&&!m.innerHTML.trim())m.innerHTML='<div class="empty">Có lỗi nhỏ. Hãy tải lại trang — dữ liệu của bạn vẫn được lưu.</div>'};theme();render();
+</script></body></html>
